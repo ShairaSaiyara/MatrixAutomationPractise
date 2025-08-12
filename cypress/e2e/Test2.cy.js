@@ -9,7 +9,7 @@ describe('Automation Test Suite for Login Functionality', () => {
     cy.get('#Email').type('mmcapitol@example.com')
     cy.get('#Password').type('M@tr1x2022')
     cy.get('.ui-button-text').click()
-    cy.url().should('include', 'https://capitolqa.matrixqa.com/monarch/#/')
+    cy.url().should('include', 'https://nexstarqa.matrixqa.com/monarch/#/')
   })
 
   it('cannot log in with invalid credentials', () => {
