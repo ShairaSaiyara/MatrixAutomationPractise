@@ -17,7 +17,7 @@ describe('Activities List Page Tests', () => {
         .invoke('text')
         .then((activityName) => {
           cy.wrap($el).click()//click activity
-          cy.wait(50000)
+          cy.wait(20000)
           cy.get('span[editable-text="ctrl.activity.subject"]')
             .invoke('text')
             .then((activitySubject) => {
@@ -28,6 +28,4 @@ describe('Activities List Page Tests', () => {
         })
     })
 })
-
-
 })
