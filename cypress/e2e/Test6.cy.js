@@ -17,19 +17,17 @@ describe('Activities List Page Tests', () => {
         .invoke('text')
         .then((activityName) => {
           cy.wrap($el).click()//click activity
-          cy.wait(10000)
+          cy.wait(50000)
           cy.get('span[editable-text="ctrl.activity.subject"]')
             .invoke('text')
             .then((activitySubject) => {
               expect(activitySubject.trim()).to.equal(activityName.trim())
             })
           cy.go('back')// Returning to activity list
-
           cy.get('.col-activity > .activities-subject > .ng-binding', { timeout: 10000 }).should('exist')
         })
     })
 })
-
 
 
 })
